@@ -1,0 +1,60 @@
+version: "3"
+
+tasks:
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  api:run:
+    desc: Run the Go API Gateway
+    dir: api
+    cmds:
+      - go run ./cmd/api
+
+  api:build:
+    desc: Build the Go API Gateway
+    dir: api
+    cmds:
+      - go build ./cmd/api
+
+  core:run:
+    desc: Run the Rust compute core
+    dir: core
+    cmds:
+      - cargo run
+
+  core:check:
+    desc: Check the Rust compute core
+    dir: core
+    cmds:
+      - cargo check
+
+  ephemeris:run:
+    desc: Run the isolated ephemeris service
+    dir: ephemeris-svc
+    cmds:
+      - cargo run
+
+  ephemeris:check:
+    desc: Check the isolated ephemeris service
+    dir: ephemeris-svc
+    cmds:
+      - cargo check
+
+  frontend:dev:
+    desc: Run the frontend in dev mode
+    dir: frontend
+    cmds:
+      - npm run dev
+
+  frontend:build:
+    desc: Build the frontend
+    dir: frontend
+    cmds:
+      - npm run build
+
+  proto:lint:
+    desc: Placeholder for protobuf linting
+    cmds:
+      - echo "Add buf lint when buf is introduced"

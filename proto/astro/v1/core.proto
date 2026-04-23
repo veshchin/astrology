@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package astro.v1;
+
+option go_package = "github.com/veshchin/astrology/proto/gen/astro/v1;astrov1";
+
+message EphemerisWindowRequest {
+  string body = 1;
+  double julian_day_start = 2;
+  uint32 window_days = 3;
+}
+
+message SamplePoint {
+  string body = 1;
+  double julian_day = 2;
+  double longitude = 3;
+}
+
+message EphemerisWindowResponse {
+  repeated SamplePoint samples = 1;
+}
+
+service ComputeCoreService {
+  rpc BuildWindow(EphemerisWindowRequest) returns (EphemerisWindowResponse);
+}

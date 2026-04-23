@@ -1,0 +1,12 @@
+[package]
+name = "astro-core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "astro_core"
+path = "src/lib.rs"
+
+[[bin]]
+name = "astro-core"
+path = "src/main.rs"

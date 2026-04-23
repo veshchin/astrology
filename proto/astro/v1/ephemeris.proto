@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package astro.v1;
+
+option go_package = "github.com/veshchin/astrology/proto/gen/astro/v1;astrov1";
+
+message ResolveBodyRequest {
+  string body = 1;
+  double julian_day = 2;
+}
+
+message ResolveBodyResponse {
+  string body = 1;
+  double longitude = 2;
+  double latitude = 3;
+}
+
+service EphemerisService {
+  rpc ResolveBody(ResolveBodyRequest) returns (ResolveBodyResponse);
+}

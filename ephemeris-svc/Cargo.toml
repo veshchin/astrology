@@ -1,0 +1,12 @@
+[package]
+name = "astro-ephemeris-svc"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "astro_ephemeris_svc"
+path = "src/lib.rs"
+
+[[bin]]
+name = "astro-ephemeris-svc"
+path = "src/main.rs"

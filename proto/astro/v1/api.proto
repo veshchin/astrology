@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package astro.v1;
+
+option go_package = "github.com/veshchin/astrology/proto/gen/astro/v1;astrov1";
+
+message HealthRequest {}
+
+message HealthResponse {
+  string service = 1;
+  string status = 2;
+}
+
+service ApiGatewayService {
+  rpc Health(HealthRequest) returns (HealthResponse);
+}
