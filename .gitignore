@@ -1,0 +1,50 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Environment
+.env
+.env.*
+!.env.example
+*.local
+
+# Go
+bin/
+.coverprofile
+*.test
+
+# Rust
+target/
+**/target/
+
+# Node / frontend
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Tauri / Capacitor
+src-tauri/target/
+android/.gradle/
+android/app/build/
+ios/Pods/
+ios/build/
+
+# Docker / local runtime
+.docker/
+docker-compose.override.yml
+
