@@ -6,6 +6,7 @@ desktop.ini
 # Editors and IDEs
 .idea/
 .vscode/
+.zed/
 *.swp
 *.swo
 *.tmp
@@ -47,4 +48,3 @@ ios/build/
 # Docker / local runtime
 .docker/
 docker-compose.override.yml
-
